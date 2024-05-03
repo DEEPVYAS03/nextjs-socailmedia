@@ -38,7 +38,7 @@ const UserCard = ({ userData, update }) => {
 
   const handleFollow = async () => {
     const response = await fetch(
-      `/api/user/${user.id}/follow/${userData._id}`,
+      `/api/user/${user?.id}/follow/${userData?._id}`,
       {
         method: "POST",
         headers: {
