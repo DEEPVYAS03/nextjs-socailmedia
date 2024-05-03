@@ -17,7 +17,7 @@ const TopBar = () => {
   const [userData, setUserData] = useState({});
 
   const getUser = async () => {
-    const response = await fetch(`/api/user/${user.id}`);
+    const response = await fetch(`/api/user/${user?.id}`);
     const data = await response.json();
     setUserData(data);
     setLoading(false);
